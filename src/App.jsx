@@ -50,7 +50,73 @@ function App() {
       <div className="main">
         <div className="chats">
           <div className="chat">
-            <img src={userIcon} alt="" />
+            <img className="chatImg" src={userIcon} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+
+          <div className="chat bot">
+            <img className="chatImg" src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis, quisquam optio recusandae sunt eaque tenetur unde eos,
+              blanditiis beatae quae facere quia dignissimos nostrum repellendus
+              iure error rem. Possimus quo quibusdam nostrum explicabo
+              consectetur non, sapiente laudantium sequi dolorum saepe quasi
+              aperiam ex nobis esse rerum enim! Nemo, velit dolore. Molestiae
+              veritatis quaerat sed. Corporis illum mollitia molestiae.
+              Accusantium ratione eum maxime quasi quisquam in rem perspiciatis,
+              expedita fuga iste, n
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
+            <p className="txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
+            </p>
+          </div>
+          <div className="chat">
+            <img src={gptImgLogo} alt="" />
             <p className="txt">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
               dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
