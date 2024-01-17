@@ -9,8 +9,27 @@ import Test from "./test";
 import sendBtn from "./assets/send.svg";
 import userIcon from "./assets/user.png";
 import gptImgLogo from "./assets/chatgptLogo.svg";
+import { sendMsgToOpenAi } from "./openai";
+import { useState } from "react";
 
 function App() {
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState([
+    {
+      Text: "hi",
+      isBot: true,
+    },
+  ]);
+
+  const handleSend = async () => {
+    const res = await sendMsgToOpenAi(input);
+    setMessages([
+      ...messages,
+      { text: input, isBot: false },
+      { text: res, isBot: true },
+    ]);
+  };
+
   return (
     <div className="App">
       <div className="sideBar">
@@ -73,67 +92,20 @@ function App() {
               expedita fuga iste, n
             </p>
           </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
-          <div className="chat">
-            <img src={gptImgLogo} alt="" />
-            <p className="txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              dicta eius quas ad nihil? Esse iusto rem voluptatem quidem minus!
-            </p>
-          </div>
         </div>
         <div className="chatFooter">
           <div className="inp">
-            <input type="text" name="" id="" placeholder="Send a message..." />
-            <button className="send">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Send a message..."
+              value={input}
+              onChange={(e) => {
+                setInput(e.target.value);
+              }}
+            />
+            <button className="send" onClick={handleSend}>
               <img src={sendBtn} alt="send" />
             </button>
           </div>
